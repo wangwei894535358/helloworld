@@ -15,3 +15,23 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+package test2;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Form;
+import javax.microedition.midlet.MIDlet;
+public class HelloWorld extends MIDlet {
+Display display;
+public HelloWorld() {
+super();
+display = Display.getDisplay(this);
+}
+protected void startApp(){
+Form form = new Form("小鸟飞飞");
+form.append("Welcome to J2ME world!");
+display.setCurrent(form);
+}
+protected void pauseApp() {
+}
+protected void destroyApp(boolean arg0){
+}//设计可见
+}
